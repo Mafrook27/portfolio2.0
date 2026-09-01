@@ -1,0 +1,26 @@
+[
+  {
+    "title": "HackerRank: JavaScript & Java Verified",
+    "description": "Verified gold-badge proficiency demonstrating advanced procedural logic, typing safety, object-oriented concepts, and computational algorithms.",
+    "url": "https://www.hackerrank.com/profile/mafrooktkc",
+    "icon": "BookOpen"
+  },
+  {
+    "title": "AWS Cloud Practitioner",
+    "description": "In progress via Udemy, covering core AWS services, cloud architecture fundamentals, and security/IAM basics.",
+    "url": "https://www.linkedin.com/in/k-mafrook/",
+    "icon": "ShieldCheck"
+  },
+  {
+    "title": "AWS Fundamentals",
+    "description": "Completed as part of college coursework, covering foundational AWS cloud concepts.",
+    "url": "https://www.linkedin.com/in/k-mafrook/",
+    "icon": "ShieldCheck"
+  },
+  {
+    "title": "freeCodeCamp: Responsive Web Design",
+    "description": "Comprehensive engineering curriculum detailing custom viewport media directives, fluid layout alignment algorithms, flexbox grids, and design standards.",
+    "url": "https://www.linkedin.com/in/k-mafrook/",
+    "icon": "Layout"
+  }
+]

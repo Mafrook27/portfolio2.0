@@ -1,0 +1,8 @@
+{
+  "owner": "Mafrook27",
+  "repo": "-portfolio2.0",
+  "branch": "main",
+  "contentDir": "content",
+  "liveFetch": true,
+  "cacheMinutes": 10
+}

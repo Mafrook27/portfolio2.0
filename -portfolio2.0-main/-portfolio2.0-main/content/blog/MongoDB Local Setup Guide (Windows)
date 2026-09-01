@@ -1,0 +1,268 @@
+# MongoDB Local Setup Guide (Windows)
+
+This guide explains how to set up a local MongoDB server and restore a MongoDB backup for development.
+
+---
+
+# Prerequisites
+
+Install the following:
+
+## 1. MongoDB Community Server
+
+Purpose:
+- Runs the local MongoDB database.
+- Default port: 27017
+
+Download:
+https://www.mongodb.com/try/download/community
+
+Install:
+- Community Edition
+- Windows MSI
+- Complete Installation
+- Install as Windows Service (Recommended)
+
+Verify:
+
+```bash
+mongod --version
+```
+
+---
+
+## 2. MongoDB Database Tools
+
+Purpose:
+- mongodump
+- mongorestore
+- bsondump
+
+Download:
+https://www.mongodb.com/try/download/database-tools
+
+Verify:
+
+```bash
+mongodump --version
+mongorestore --version
+```
+
+---
+
+## 3. MongoDB Compass (Optional)
+
+Purpose:
+- GUI for viewing databases
+
+Download:
+https://www.mongodb.com/products/tools/compass
+
+Connect:
+
+```
+mongodb://localhost:27017
+```
+
+---
+
+# Local MongoDB
+
+Default connection string
+
+```text
+mongodb://localhost:27017
+```
+
+---
+
+# Backup Database From Remote Server
+
+Example:
+
+```bash
+mongodump --uri="YOUR_MONGODB_CONNECTION_STRING" --out="D:\MongoBackup"
+```
+
+Example output:
+
+```
+MongoBackup/
+├── Copilot/
+├── Admin_Central/
+├── admin/
+└── node-boilerplate/
+```
+
+---
+
+# Restore Backup Into Local MongoDB
+
+Restore all databases:
+
+```bash
+mongorestore --drop "D:\MongoBackup"
+```
+
+Restore only one database:
+
+```bash
+mongorestore --drop --db Copilot "D:\MongoBackup\Copilot"
+```
+
+---
+
+# Verify
+
+Open Compass
+
+Connect
+
+```
+mongodb://localhost:27017
+```
+
+You should see databases like:
+
+```
+Copilot
+Admin_Central
+node-boilerplate
+```
+
+---
+
+# Useful Commands
+
+Check MongoDB Server
+
+```bash
+mongod --version
+```
+
+Check Database Tools
+
+```bash
+mongodump --version
+mongorestore --version
+```
+
+Check MongoDB Service
+
+```bash
+sc query MongoDB
+```
+
+Start MongoDB Service
+
+```bash
+net start MongoDB
+```
+
+Stop MongoDB Service
+
+```bash
+net stop MongoDB
+```
+
+---
+
+# Backup Folder Structure
+
+Correct structure:
+
+```
+MongoBackup/
+│
+├── Copilot/
+│   ├── Campaign.bson
+│   ├── Campaign.metadata.json
+│   ├── Users.bson
+│   └── ...
+│
+├── Admin_Central/
+│
+├── admin/
+│
+└── node-boilerplate/
+```
+
+Each folder = Database
+
+Each .bson file = Collection
+
+---
+
+# MongoDB Structure
+
+```
+MongoDB Server
+│
+├── Database
+│     ├── Collection
+│     │      ├── Document
+│     │      ├── Document
+│     │      └── Document
+│     │
+│     └── Collection
+│
+└── Database
+```
+
+---
+
+# SQL vs MongoDB
+
+| SQL | MongoDB |
+|------|----------|
+| Server | Server |
+| Database | Database |
+| Table | Collection |
+| Row | Document |
+| Column | Field |
+| Primary Key | _id |
+
+---
+
+# Common Workflow
+
+Install MongoDB Server
+
+↓
+
+Start MongoDB
+
+↓
+
+Restore Backup
+
+```bash
+mongorestore --drop "BackupFolder"
+```
+
+↓
+
+Open Compass
+
+↓
+
+Connect
+
+```
+mongodb://localhost:27017
+```
+
+↓
+
+Start Development
+
+---
+
+# Notes
+
+- One MongoDB server can contain many databases.
+- Default local port is **27017**.
+- Use **mongodump** to export databases.
+- Use **mongorestore** to import databases.
+- Compass is only a GUI. It does not run the MongoDB server.
+- Database Tools are utilities only. They do not run the MongoDB server.

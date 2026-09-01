@@ -1,0 +1,16 @@
+[
+  {
+    "title": "html-formeditor [opensrc]",
+    "desc": "Built a custom, canvas-style visual editor from scratch to create and manage official company documents and email templates. Designed an intuitive drag-and-drop canvas interface leveraging shadcn/ui and Tailwind CSS, eliminating third-party builder packages, and ensuring strict type-safety via TypeScript.",
+    "github": "https://github.com/Mafrook27",
+    "technologies": ["React.js", "shadcn", "tailwind", "typescript"],
+    "icon": "Code2"
+  },
+  {
+    "title": "AccessVault - Role-Based Credential Management System",
+    "desc": "A secure credential management application with role-based access for Admin, Manager, and Viewer users. Implemented JWT authentication and bcrypt password hashing, designed MongoDB schemas with validation rules, and built REST APIs with audit logging capabilities.",
+    "github": "https://github.com/Mafrook27",
+    "technologies": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
+    "icon": "ShieldCheck"
+  }
+]

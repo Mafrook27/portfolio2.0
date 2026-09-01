@@ -1,0 +1,31 @@
+{
+  "languages": [
+    { "label": "TypeScript", "percentage": 80, "icon": "SiTypescript", "color": "#3178c6" },
+    { "label": "JavaScript", "percentage": 85, "icon": "SiJavascript", "color": "#f7df1e" },
+    { "label": "Java", "percentage": 80, "icon": "FaJava", "color": "#e32c2e" },
+    { "label": "Python", "percentage": 65, "icon": "FaPython", "color": "#3776ab" },
+    { "label": "HTML5", "percentage": 90, "icon": "FaHtml5", "color": "#e34f26" },
+    { "label": "CSS3", "percentage": 85, "icon": "FaCss3Alt", "color": "#1572b6" },
+    { "label": "SQL", "percentage": 70, "icon": "SiMysql", "color": "#4479a1" }
+  ],
+  "frameworks": [
+    { "label": "React.js", "percentage": 85, "icon": "FaReact", "color": "#61dafb" },
+    { "label": "Node.js", "percentage": 80, "icon": "Terminal", "color": "#339933" },
+    { "label": "Express.js", "percentage": 80, "icon": "SiExpress", "color": "#000000" },
+    { "label": "React Query", "percentage": 75, "icon": "SiReactquery", "color": "#ff4154" },
+    { "label": "Tailwind CSS", "percentage": 90, "icon": "SiTailwindcss", "color": "#38bdf8" },
+    { "label": "MongoDB", "percentage": 78, "icon": "SiMongodb", "color": "#47a248" }
+  ],
+  "tools": [
+    { "label": "Git & GitHub", "percentage": 85, "icon": "FaGitAlt", "color": "#f05032" },
+    { "label": "Postman", "percentage": 80, "icon": "SiPostman", "color": "#ff6c37" },
+    { "label": "GitHub Actions", "percentage": 70, "icon": "ShieldCheck", "color": "#2088ff" },
+    { "label": "Vercel & Firebase", "percentage": 80, "icon": "Award", "color": "#000000" }
+  ],
+  "ai": [
+    { "label": "Claude / Codex", "percentage": 90, "icon": "Sparkles", "color": "#D97706" },
+    { "label": "Google AI Studio", "percentage": 85, "icon": "Cpu", "color": "#1E3A8A" },
+    { "label": "Stitch for UI", "percentage": 85, "icon": "Layout", "color": "#4F46E5" },
+    { "label": "Markdown Specs", "percentage": 95, "icon": "FileText", "color": "#059669" }
+  ]
+}

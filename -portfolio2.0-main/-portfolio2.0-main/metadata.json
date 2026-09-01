@@ -1,0 +1,8 @@
+{
+  "name": "Mafrook Portfolio",
+  "description": "Elegant personal portfolio website of Mafrook, a Full-Stack Software Engineer, optimized for mobile devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

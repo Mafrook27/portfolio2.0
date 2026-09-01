@@ -1,0 +1,29 @@
+[
+  {
+    "role": "Junior Software Engineer, Full-Stack",
+    "company": "Statlight Software Solutions",
+    "location": "Bengaluru, India | Hybrid",
+    "period": "Jun 2025 - Present",
+    "startDate": "2025-06-01",
+    "endDate": null,
+    "points": [
+      "Own core module development within a team-wide migration of the company's CRM/LMS platform from Angular 9 to React 18, building UI components across dashboards, forms, and workflow screens, including a canvas-style template editor.",
+      "Own end-to-end redesign, performance optimization, and maintenance of the chat application, including its Twilio-based communication component.",
+      "Fixed a chat performance issue causing the interface to lag under heavy message activity - identified the cause as unnecessary re-rendering on every incoming message, and reworked how the chat fetched and updated data to keep it responsive at scale.",
+      "Redesigned how chat integrates with the CRM - replacing a tightly-coupled embed that required manual wiring between the two systems with a self-contained, plug-and-play widget, removing that integration overhead for other teams.",
+      "Built and maintained Node.js/Express APIs and MongoDB/Mongoose schemas for authentication, access control, workflow records, and application data.",
+      "Set up monitoring for the SMS and chat servers to track application and server health - first hands-on step into infrastructure work."
+    ]
+  },
+  {
+    "role": "Technical Trainer & Freelance Developer",
+    "company": "a1ideaz",
+    "location": "Mayiladuthurai, India",
+    "period": "Oct 2024 - Feb 2025",
+    "startDate": "2024-10-01",
+    "endDate": "2025-02-28",
+    "points": [
+      "Trained students in JavaScript and full-stack fundamentals (CRUD apps, auth flows, REST APIs) and took on freelance development for external B2B clients."
+    ]
+  }
+]

@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --paper: #ede7dc;
+  --paper-2: #e4dccc;
+  --card: #f7f3ea;
+  --ink: #2e2a24;
+  --ink-soft: #5b554a;
+  --olive: #5f6b4e;
+  --olive-deep: #3f4636;
+  --clay: #b5674a;
+  --denim: #3e5c74;
+  --tape: #d9cb8f;
+  --line: rgba(46, 42, 36, 0.14);
+  --shadow: rgba(46, 42, 36, 0.28);
+}
+
+.dark, [data-theme="dark"] {
+  --paper: #2a2620;
+  --paper-2: #23201b;
+  --card: #33302a;
+  --ink: #ede7dc;
+  --ink-soft: #c9c2b4;
+  --olive: #9cae81;
+  --olive-deep: #c9d6b4;
+  --clay: #e39775;
+  --denim: #8fb2cc;
+  --tape: #7a7150;
+  --line: rgba(237, 231, 220, 0.16);
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+@theme {
+  --font-sans: "Sora", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-handwriting: "Caveat", cursive;
+
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
+  --color-clay: var(--clay);
+  --color-denim: var(--denim);
+  --color-tape: var(--tape);
+  --color-line: var(--line);
+  --color-shadow: var(--shadow);
+
+  /* Legacy layout color wrappers to maintain full compatibility */
+  --color-bg-main: var(--paper);
+  --color-bg-surface: var(--card);
+  --color-bg-neutral: var(--paper-2);
+  --color-text-primary: var(--ink);
+  --color-text-secondary: var(--ink-soft);
+  --color-accent: var(--clay);
+  --color-accent-hover: var(--clay);
+  --color-border-custom: var(--line);
+  --color-nobel-gold: var(--clay);
+  --color-nobel-dark: var(--paper);
+  --color-nobel-cream: var(--paper-2);
+}
+
+/* Custom styles for that physical paper / desk background */
+html, body {
+  font-family: "Sora", system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  background-image: 
+    radial-gradient(ellipse at 10% -10%, rgba(255, 255, 255, 0.22), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 3px);
+  background-attachment: fixed;
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+  overflow-x: hidden;
+}
+
+.dark html, .dark body {
+  background-image: 
+    radial-gradient(ellipse at 10% -10%, rgba(255, 255, 255, 0.03), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.005) 0px, rgba(255, 255, 255, 0.005) 1px, transparent 1px, transparent 3px);
+}
+
+/* Handwriting Accents */
+.marker, .handwritten {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+}
+
+/* Base Physical Cards with Alternate Resting Rotations and Elevate-on-Hover */
+.desk-card {
+  position: relative;
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: border-color 280ms ease,
+              background-color 280ms ease,
+              box-shadow 280ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: visible !important;
+  isolation: isolate;
+}
+
+.desk-card:hover, .desk-card:focus-visible {
+  border-color: var(--clay);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02), 
+              0 16px 28px rgba(0, 0, 0, 0.05), 
+              0 32px 48px -12px rgba(0, 0, 0, 0.08);
+}
+
+.desk-card.taped-card:hover, .desk-card.taped-card:focus-visible {
+  border-color: var(--line);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Reusable Clay Card styled to map nicely to the physical card tokens */
+.clay-card {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 10px 22px -10px var(--shadow);
+  transition: all 220ms ease;
+}
+
+.clay-card:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  border-color: var(--clay);
+  box-shadow: 0 18px 36px -12px var(--shadow);
+}
+
+/* Simplified Bubble Recess */
+.clay-bubble {
+  background-color: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* Washi Tape Strip */
+.tape {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%) rotate(-3deg);
+  width: 140px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(217, 203, 143, 0.94), rgba(201, 184, 116, 0.88));
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  z-index: 20;
+}
+
+.tape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(115deg, rgba(255,255,255,0.35) 0 2px, transparent 2px 8px);
+}
+
+.tape-sm {
+  width: 90px;
+  height: 28px;
+  top: -14px;
+  transform: translate(-50%) rotate(2deg);
+}
+
+.tape-dark {
+  background: linear-gradient(180deg, rgba(122, 113, 80, 0.94), rgba(100, 92, 65, 0.88));
+}
+
+/* Realistic Push Pins */
+.card-pin {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%) rotate(6deg);
+  width: 24px;
+  height: 30px;
+  z-index: 30;
+  pointer-events: none;
+  filter: drop-shadow(2px 5px 3px var(--shadow));
+}
+
+.pin-clay { color: var(--clay); }
+.pin-olive { color: var(--olive); }
+.pin-denim { color: var(--denim); }
+.pin-tape { color: var(--tape); }
+
+/* Polaroid Aesthetic Photo Frame */
+.polaroid {
+  background-color: #fdfcf8;
+  border: 1px solid rgba(46, 42, 36, 0.12);
+  padding: 14px 14px 20px;
+  box-shadow: 0 16px 36px -12px var(--shadow);
+  transform: rotate(3deg);
+  width: 100%;
+  max-width: 330px;
+  border-radius: 2px;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.dark .polaroid {
+  background-color: #33302a;
+  border-color: rgba(237, 231, 220, 0.12);
+}
+
+.polaroid:hover {
+  transform: rotate(3deg);
+  box-shadow: 0 16px 36px -12px var(--shadow);
+}
+
+.polaroid-caption {
+  font-family: "Caveat", cursive;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* Section Header Tilted Chip */
+.section-head-chip {
+  display: inline-block;
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 28px;
+  box-shadow: 0 8px 16px -6px var(--shadow);
+  transform: rotate(-1.5deg);
+}
+
+/* ---------------------------------------------------------------------------
+   Markdown prose (blog posts & prompt pages)
+   Tuned for comfortable reading on mobile and desktop.
+--------------------------------------------------------------------------- */
+.md-prose {
+  color: var(--ink);
+  font-size: 0.925rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 640px) {
+  .md-prose { font-size: 1rem; }
+}
+
+.md-prose h1, .md-prose h2, .md-prose h3, .md-prose h4 {
+  font-family: "Sora", system-ui, sans-serif;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin: 2em 0 0.6em;
+}
+
+.md-prose h1 { font-size: 1.6em; }
+.md-prose h2 {
+  font-size: 1.3em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px dashed var(--line);
+}
+.md-prose h3 { font-size: 1.12em; }
+.md-prose h4 { font-size: 1em; }
+.md-prose > :first-child { margin-top: 0; }
+
+.md-prose p { margin: 0.9em 0; }
+.md-prose strong { font-weight: 700; color: var(--ink); }
+
+.md-prose a {
+  color: var(--clay);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--clay) 40%, transparent);
+  text-underline-offset: 3px;
+}
+.md-prose a:hover { text-decoration-color: var(--clay); }
+
+.md-prose ul, .md-prose ol {
+  margin: 0.9em 0;
+  padding-inline-start: 1.4em;
+}
+.md-prose ul { list-style: disc; }
+.md-prose ol { list-style: decimal; }
+.md-prose li { margin: 0.35em 0; }
+.md-prose li::marker { color: var(--clay); }
+
+.md-prose blockquote {
+  margin: 1.2em 0;
+  padding: 0.6em 1.1em;
+  border-inline-start: 3px solid var(--clay);
+  background-color: var(--paper-2);
+  border-radius: 0 8px 8px 0;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.md-prose hr {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 2.2em 0;
+}
+
+.md-prose code:not(.hljs-body) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  background-color: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.1em 0.4em;
+  color: var(--clay);
+}
+
+.md-prose .md-img {
+  display: block;
+  max-width: 100%;
+  margin: 1.4em auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 24px -12px var(--shadow);
+}
+
+.md-prose .md-table-wrap {
+  overflow-x: auto;
+  margin: 1.4em 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.md-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875em;
+}
+.md-prose th, .md-prose td {
+  padding: 0.55em 0.9em;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.md-prose th {
+  background-color: var(--paper-2);
+  font-weight: 700;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.md-prose tr:last-child td { border-bottom: none; }
+
+/* Syntax highlighting — theme-token based, works in light & dark */
+.hljs-body { color: var(--ink); }
+.hljs-comment, .hljs-quote { color: var(--ink-soft); opacity: 0.75; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-meta { color: var(--clay); font-weight: 600; }
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute { color: var(--olive); }
+.hljs-title, .hljs-name, .hljs-type, .hljs-class .hljs-title, .hljs-title.class_, .hljs-title.function_ { color: var(--denim); font-weight: 600; }
+.hljs-number, .hljs-symbol, .hljs-bullet, .hljs-link { color: var(--clay); }
+.hljs-built_in, .hljs-builtin-name, .hljs-variable, .hljs-template-variable, .hljs-attr { color: var(--olive-deep); }
+.hljs-deletion { color: #b5484a; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: 700; }
+
+/* Print Overrides */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    background-image: none !important;
+  }
+  body > * {
+    display: none !important;
+  }
+  #printable-resume-wrapper,
+  #printable-resume-wrapper * {
+    display: block !important;
+  }
+  #printable-resume,
+  #printable-resume * {
+    visibility: visible !important;
+    display: block !important;
+  }
+  #printable-resume {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+  .fixed, .bg-stone-900\/60, .bg-stone-50, button, a, .shrink-0, .scrollbar-thin {
+    display: none !important;
+  }
+}
