@@ -54,10 +54,12 @@ const withIcon = <T extends { icon?: string }>(item: T) => ({
 
 export const socialLinks: SocialLink[] = socialsJson.map(withIcon);
 
-export const skills: Record<'languages' | 'frameworks' | 'tools' | 'ai', Skill[]> = {
+export const skills: Record<'languages' | 'frameworks' | 'databases' | 'tools' | 'devops' | 'ai', Skill[]> = {
   languages: skillsJson.languages.map(withIcon),
   frameworks: skillsJson.frameworks.map(withIcon),
+  databases: skillsJson.databases.map(withIcon),
   tools: skillsJson.tools.map(withIcon),
+  devops: skillsJson.devops.map(withIcon),
   ai: skillsJson.ai.map(withIcon),
 };
 

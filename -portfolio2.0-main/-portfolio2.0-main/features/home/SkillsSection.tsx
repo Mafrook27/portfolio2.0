@@ -5,7 +5,7 @@ import { skills } from '../../lib/data';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
 import { PhysicalCard } from '../../components/ui/PhysicalCard';
-import { Code2, Layers, Cpu, Wrench } from 'lucide-react';
+import { Code2, Layers, Cpu, Wrench, Database, Rocket } from 'lucide-react';
 
 export const SkillsSection: React.FC = () => {
   const { t, isRtl } = useLanguage();
@@ -55,39 +55,77 @@ export const SkillsSection: React.FC = () => {
     },
     {
       id: 2,
-      labelEn: "Tools & Ops",
-      labelAr: "الأدوات",
+      labelEn: "Databases",
+      labelAr: "قواعد البيانات",
       color: "var(--denim)",
-      icon: Wrench,
-      skillsData: skills.tools,
-      description: t.skillsDescTools,
+      icon: Database,
+      skillsData: skills.databases,
+      description: t.skillsDescDatabases,
       restingRotation: -0.8,
       // Taped diagonally at Top-Right and Bottom-Left corners wrapping the edges
       tapes: [
-        { 
+        {
           className: "absolute top-[-16px] right-[-24px] rotate-[32deg] w-24 h-7"
         },
-        { 
+        {
           className: "absolute bottom-[-16px] left-[-24px] rotate-[28deg] w-24 h-7"
         }
       ]
     },
     {
       id: 3,
-      labelEn: "AI Prompting",
-      labelAr: "الذكاء الاصطناعي",
+      labelEn: "Tools",
+      labelAr: "الأدوات",
       color: "var(--tape)",
-      icon: Cpu,
-      skillsData: skills.ai,
-      description: t.skillsDescAI,
+      icon: Wrench,
+      skillsData: skills.tools,
+      description: t.skillsDescTools,
       restingRotation: 1.2,
       // Taped symmetrically at Bottom-Left and Bottom-Right corners wrapping the edges
       tapes: [
-        { 
+        {
           className: "absolute bottom-[-16px] left-[-24px] rotate-[30deg] w-24 h-7"
         },
-        { 
+        {
           className: "absolute bottom-[-16px] right-[-24px] rotate-[-32deg] w-24 h-7"
+        }
+      ]
+    },
+    {
+      id: 4,
+      labelEn: "DevOps",
+      labelAr: "عمليات التطوير",
+      color: "var(--olive)",
+      icon: Rocket,
+      skillsData: skills.devops,
+      description: t.skillsDescDevOps,
+      restingRotation: -1.0,
+      // Taped symmetrically at Top-Left and Top-Right corners wrapping the edges
+      tapes: [
+        {
+          className: "absolute top-[-16px] left-[-24px] rotate-[-32deg] w-24 h-7"
+        },
+        {
+          className: "absolute top-[-16px] right-[-24px] rotate-[30deg] w-24 h-7"
+        }
+      ]
+    },
+    {
+      id: 5,
+      labelEn: "Applied AI",
+      labelAr: "الذكاء الاصطناعي التطبيقي",
+      color: "var(--clay)",
+      icon: Cpu,
+      skillsData: skills.ai,
+      description: t.skillsDescAI,
+      restingRotation: 0.9,
+      // Taped diagonally at Top-Left and Bottom-Right corners wrapping the edges
+      tapes: [
+        {
+          className: "absolute top-[-16px] left-[-24px] rotate-[-30deg] w-24 h-7"
+        },
+        {
+          className: "absolute bottom-[-16px] right-[-24px] rotate-[-28deg] w-24 h-7"
         }
       ]
     },
@@ -154,11 +192,11 @@ export const SkillsSection: React.FC = () => {
       <div className="absolute top-1/4 right-0 w-[350px] h-[350px] bg-paper-2 blur-[90px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-30" />
       <div className="absolute bottom-1/4 left-0 w-[350px] h-[350px] bg-paper-2 blur-[90px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/3 opacity-30" />
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10 max-w-6xl">
         <SectionHeading pretitle={t.skillsPretitle} title={t.skillsTitle} />
 
         {/* TAPED DESK BOARD GRID */}
-        <div className="mt-16 sm:mt-24 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 max-w-4xl mx-auto">
+        <div className="mt-16 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-5xl mx-auto">
           {categories.map((category) => {
             const headingText = isRtl ? category.labelAr : category.labelEn;
 

@@ -51,7 +51,9 @@ export interface TranslationDictionary {
   skillsTitle: string;
   skillsDescLanguages: string;
   skillsDescFrameworks: string;
+  skillsDescDatabases: string;
   skillsDescTools: string;
+  skillsDescDevOps: string;
   skillsDescAI: string;
 
   // Experience
@@ -121,7 +123,9 @@ const translations: Record<Language, TranslationDictionary> = {
     skillsTitle: "Skills",
     skillsDescLanguages: "Core programming languages for building secure, performant applications.",
     skillsDescFrameworks: "Modern libraries and systems for interactive interfaces and backend logic.",
-    skillsDescTools: "Essential development environments, version control, and cloud hosting.",
+    skillsDescDatabases: "Data stores and caching layers for persistent, high-throughput applications.",
+    skillsDescTools: "Essential development environments and API workflow tooling.",
+    skillsDescDevOps: "Pipelines, containers, cloud hosting, and monitoring for shipping reliable software.",
     skillsDescAI: "Leveraging advanced LLMs and precision prompting to accelerate software development.",
 
     expPretitle: "History",
@@ -185,7 +189,9 @@ const translations: Record<Language, TranslationDictionary> = {
     skillsTitle: "Fähigkeiten",
     skillsDescLanguages: "Kernsprachen für die Entwicklung sicherer und performanter Anwendungen.",
     skillsDescFrameworks: "Moderne Bibliotheken und Systeme für interaktive Frontends und Backends.",
-    skillsDescTools: "Entwicklungswerkzeuge, Versionskontrolle und Cloud-Hosting.",
+    skillsDescDatabases: "Datenbanken und Caching-Schichten für persistente, hochperformante Anwendungen.",
+    skillsDescTools: "Wesentliche Entwicklungsumgebungen und API-Workflow-Werkzeuge.",
+    skillsDescDevOps: "Pipelines, Container, Cloud-Hosting und Monitoring für zuverlässige Software.",
     skillsDescAI: "Nutzung von LLMs und präzisem Prompt-Engineering zur Entwicklungsbeschleunigung.",
 
     expPretitle: "Verlauf",
@@ -249,7 +255,9 @@ const translations: Record<Language, TranslationDictionary> = {
     skillsTitle: "المهارات المهنية",
     skillsDescLanguages: "لغات البرمجة الأساسية لبناء تطبيقات ويب آمنة وعالية الأداء.",
     skillsDescFrameworks: "أطر عمل وأنظمة حديثة لتطوير واجهات تفاعلية ومنطق برمجية متقدم.",
-    skillsDescTools: "أدوات التطوير الأساسية، أنظمة التحكم في النسخ، والاستضافة السحابية.",
+    skillsDescDatabases: "قواعد بيانات وطبقات تخزين مؤقت لتطبيقات مستقرة وعالية الأداء.",
+    skillsDescTools: "أدوات التطوير الأساسية وأدوات اختبار واجهات برمجة التطبيقات.",
+    skillsDescDevOps: "خطوط أنابيب النشر، الحاويات، الاستضافة السحابية، والمراقبة لبرمجيات موثوقة.",
     skillsDescAI: "تسخير النماذج اللغوية الكبيرة وهندسة الأوامر لتسريع وتيرة التطوير.",
 
     expPretitle: "السيرة المهنية",
