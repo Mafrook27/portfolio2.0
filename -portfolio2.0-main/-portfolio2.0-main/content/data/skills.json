@@ -5,27 +5,39 @@
     { "label": "Java", "percentage": 80, "icon": "FaJava", "color": "#e32c2e" },
     { "label": "Python", "percentage": 65, "icon": "FaPython", "color": "#3776ab" },
     { "label": "HTML5", "percentage": 90, "icon": "FaHtml5", "color": "#e34f26" },
-    { "label": "CSS3", "percentage": 85, "icon": "FaCss3Alt", "color": "#1572b6" },
-    { "label": "SQL", "percentage": 70, "icon": "SiMysql", "color": "#4479a1" }
+    { "label": "CSS3", "percentage": 85, "icon": "FaCss3Alt", "color": "#1572b6" }
   ],
   "frameworks": [
     { "label": "React.js", "percentage": 85, "icon": "FaReact", "color": "#61dafb" },
+    { "label": "Next.js", "percentage": 80, "icon": "SiNextdotjs", "color": "#000000" },
     { "label": "Node.js", "percentage": 80, "icon": "Terminal", "color": "#339933" },
     { "label": "Express.js", "percentage": 80, "icon": "SiExpress", "color": "#000000" },
-    { "label": "React Query", "percentage": 75, "icon": "SiReactquery", "color": "#ff4154" },
     { "label": "Tailwind CSS", "percentage": 90, "icon": "SiTailwindcss", "color": "#38bdf8" },
-    { "label": "MongoDB", "percentage": 78, "icon": "SiMongodb", "color": "#47a248" }
+    { "label": "FastAPI", "percentage": 65, "icon": "SiFastapi", "color": "#009688" }
+  ],
+  "databases": [
+    { "label": "MongoDB", "percentage": 78, "icon": "SiMongodb", "color": "#47a248" },
+    { "label": "SQL", "percentage": 70, "icon": "SiMysql", "color": "#4479a1" },
+    { "label": "Redis", "percentage": 65, "icon": "SiRedis", "color": "#dc382d" }
   ],
   "tools": [
     { "label": "Git & GitHub", "percentage": 85, "icon": "FaGitAlt", "color": "#f05032" },
-    { "label": "Postman", "percentage": 80, "icon": "SiPostman", "color": "#ff6c37" },
-    { "label": "GitHub Actions", "percentage": 70, "icon": "ShieldCheck", "color": "#2088ff" },
-    { "label": "Vercel & Firebase", "percentage": 80, "icon": "Award", "color": "#000000" }
+    { "label": "Postman", "percentage": 80, "icon": "SiPostman", "color": "#ff6c37" }
+  ],
+  "devops": [
+    { "label": "GitHub Actions", "percentage": 70, "icon": "SiGithubactions", "color": "#2088ff" },
+    { "label": "Vercel & Firebase", "percentage": 80, "icon": "SiVercel", "color": "#000000" },
+    { "label": "CI/CD", "percentage": 70, "icon": "Workflow", "color": "#f97316" },
+    { "label": "Docker", "percentage": 65, "icon": "FaDocker", "color": "#2496ed" },
+    { "label": "Grafana", "percentage": 60, "icon": "SiGrafana", "color": "#f46800" },
+    { "label": "Prometheus", "percentage": 60, "icon": "SiPrometheus", "color": "#e6522c" },
+    { "label": "AWS (EC2)", "percentage": 65, "icon": "FaAws", "color": "#ff9900" },
+    { "label": "DigitalOcean", "percentage": 60, "icon": "SiDigitalocean", "color": "#0080ff" }
   ],
   "ai": [
+    { "label": "Specs Engineering", "percentage": 95, "icon": "PenTool", "color": "#059669" },
     { "label": "Claude / Codex", "percentage": 90, "icon": "Sparkles", "color": "#D97706" },
     { "label": "Google AI Studio", "percentage": 85, "icon": "Cpu", "color": "#1E3A8A" },
-    { "label": "Stitch for UI", "percentage": 85, "icon": "Layout", "color": "#4F46E5" },
-    { "label": "Markdown Specs", "percentage": 95, "icon": "FileText", "color": "#059669" }
+    { "label": "Stitch for UI", "percentage": 85, "icon": "Layout", "color": "#4F46E5" }
   ]
 }

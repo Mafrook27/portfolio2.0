@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ArrowUpRight, Code2, ShieldCheck, MessageSquare, GraduationCap } from 'lucide-react';
+import { ArrowUpRight, Code2, ShieldCheck } from 'lucide-react';
 import { SectionHeading } from '../../components/ui/SectionHeading';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -21,30 +21,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ hideNavbar }) 
         {
           title: "html-formeditor [opensrc]",
           desc: "Ein benutzerdefinierter, visueller Editor im Canvas-Stil, der von Grund auf neu entwickelt wurde, um offizielle Unternehmensdokumente und E-Mail-Vorlagen zu erstellen und zu verwalten. Bietet eine intuitive Drag-and-Drop-Schnittstelle unter Verwendung von shadcn/ui und Tailwind CSS, ohne Abhängigkeiten von Drittanbieter-Buildern, und gewährleistet strikte Typsicherheit durch TypeScript.",
-          github: "https://github.com/Mafrook27",
+          live: "https://formeditor-wine.vercel.app/",
           technologies: ["React.js", "shadcn", "tailwind", "typescript"],
           icon: Code2
         },
         {
           title: "AccessVault",
           desc: "Eine sichere Anwendung zur Verwaltung von Anmeldedaten mit rollenbasiertem Zugriff (RBAC) für Admin-, Manager- und Viewer-Benutzer. Implementierung von JWT-Authentifizierung, bcrypt-Passwort-Hashing, MongoDB-Schemata mit Validierungsregeln und REST-APIs mit Audit-Protokollierungsfunktionen.",
-          github: "https://github.com/Mafrook27",
+          live: "https://credential-manager-ui.vercel.app",
+          demoCredentials: "Demo-Login — E-Mail: admin@example.com / Passwort: Admin@123",
           technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
           icon: ShieldCheck
-        },
-        {
-          title: "StatChat - Multi-Tenant Chat-Engine",
-          desc: "Entwurf und Entwicklung eines mandantenfähigen Chat-Systems für Unternehmen mit sicherer Sitzungsverwaltung, dynamischem Raum-Routing und Offline-Nachrichtencaching. Integrierte flüssige React-Frontend-Workflows mit Echtzeit-Feedback-Schleifen.",
-          github: "https://github.com/Mafrook27",
-          technologies: ["React.js", "TypeScript", "Node.js", "Express.js", "Tailwind CSS"],
-          icon: MessageSquare
-        },
-        {
-          title: "LMS Flow - Bildungs-Dashboard",
-          desc: "Entwicklung eines interaktiven Dashboards für ein Bildungsportal zur Verfolgung komplexer Lernpfade, dynamischer Bewertungsformulare und Leistungsstatistiken der Schüler. Optimiert mit React Query.",
-          github: "https://github.com/Mafrook27",
-          technologies: ["React.js", "TypeScript", "React Query", "Recharts", "Tailwind CSS"],
-          icon: GraduationCap
         }
       ];
     }
@@ -53,30 +40,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ hideNavbar }) 
         {
           title: "html-formeditor [opensrc]",
           desc: "محرر مرئي مخصص بأسلوب الكانفاس تم بناؤه من الصفر لإنشاء وإدارة مستندات الشركة الرسمية وقوالب البريد الإلكتروني. يتميز بواجهة سحب وإفلات بديهية تعتمد على shadcn/ui و Tailwind CSS، مما يلغي الاعتماد على حزم البناء الخارجية، مع ضمان أمان كامل للأنواع باستخدام TypeScript.",
-          github: "https://github.com/Mafrook27",
+          live: "https://formeditor-wine.vercel.app/",
           technologies: ["React.js", "shadcn", "tailwind", "typescript"],
           icon: Code2
         },
         {
           title: "AccessVault",
           desc: "تطبيق آمن لإدارة بيانات الاعتماد مع وصول قائم على الأدوار للمستخدمين من فئات المسؤول والمدير والمشاهد. تم تنفيذ مصادقة JWT وتشفير كلمات المرور عبر bcrypt، وتصميم مخططات MongoDB مع قواعد التحقق، وإنشاء واجهات برمجة تطبيقات REST مع ميزات تسجيل تدقيق الحسابات.",
-          github: "https://github.com/Mafrook27",
+          live: "https://credential-manager-ui.vercel.app",
+          demoCredentials: "بيانات الدخول التجريبية — البريد الإلكتروني: admin@example.com / كلمة المرور: Admin@123",
           technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
           icon: ShieldCheck
-        },
-        {
-          title: "StatChat - محرك المحادثة متعدد المستأجرين",
-          desc: "تصميم وتطوير نظام محادثة متعدد المستأجرين مخصص للمؤسسات يدعم إدارة الجلسات الآمنة، وتوجيه الغرف الديناميكي، والتخزين المؤقت للرسائل في وضع عدم الاتصال بالإنترنت مع واجهات مستخدم سلسة.",
-          github: "https://github.com/Mafrook27",
-          technologies: ["React.js", "TypeScript", "Node.js", "Express.js", "Tailwind CSS"],
-          icon: MessageSquare
-        },
-        {
-          title: "LMS Flow - لوحة تحكم لإدارة التعلم",
-          desc: "تطوير لوحة تحكم تفاعلية لبوابة تعليمية تتعامل مع تتبع مسارات التعلم المعقدة، ونماذج التقييم الديناميكية، وإحصاءات أداء الطلاب مع مزامنة سلسة للبيانات باستخدام React Query.",
-          github: "https://github.com/Mafrook27",
-          technologies: ["React.js", "TypeScript", "React Query", "Recharts", "Tailwind CSS"],
-          icon: GraduationCap
         }
       ];
     }
@@ -84,30 +58,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ hideNavbar }) 
       {
         title: "html-formeditor [opensrc]",
         desc: "Built a custom, canvas-style visual editor from scratch to create and manage official company documents and email templates. Designed an intuitive drag-and-drop canvas interface leveraging shadcn/ui and Tailwind CSS, eliminating third-party builder packages, and ensuring strict type-safety via TypeScript.",
-        github: "https://github.com/Mafrook27",
+        live: "https://formeditor-wine.vercel.app/",
         technologies: ["React.js", "shadcn", "tailwind", "typescript"],
         icon: Code2
       },
       {
         title: "AccessVault",
         desc: "A secure credential management application with role-based access for Admin, Manager, and Viewer users. Implemented JWT authentication and bcrypt password hashing, designed MongoDB schemas with validation rules, and built REST APIs with audit logging capabilities.",
-        github: "https://github.com/Mafrook27",
+        live: "https://credential-manager-ui.vercel.app",
+        demoCredentials: "Demo login — Email: admin@example.com / Password: Admin@123",
         technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
         icon: ShieldCheck
-      },
-      {
-        title: "StatChat - Multi-Tenant Chat Engine",
-        desc: "Designed and engineered an enterprise-grade multi-tenant chat system supporting secure session handling, dynamic room routing, and offline message caching. Integrated fluid React frontend workflows with real-time feedback loops.",
-        github: "https://github.com/Mafrook27",
-        technologies: ["React.js", "TypeScript", "Node.js", "Express.js", "Tailwind CSS"],
-        icon: MessageSquare
-      },
-      {
-        title: "LMS Flow - Learning Management Client",
-        desc: "Developed an interactive education portal dashboard handling complex learning path tracking, dynamic assessment forms, and student performance statistics. Crafted responsive charts and detailed course modules using React Query.",
-        github: "https://github.com/Mafrook27",
-        technologies: ["React.js", "TypeScript", "React Query", "Recharts", "Tailwind CSS"],
-        icon: GraduationCap
       }
     ];
   };
@@ -228,7 +189,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ hideNavbar }) 
                 className="w-full sm:w-[calc(50%-12px)] flex-shrink-0 snap-start h-full"
               >
                 <motion.a
-                  href={project.github}
+                  href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col p-6 sm:p-8 rounded-[4px] bg-card border border-line shadow-sm hover:shadow-md transition-all duration-300 h-full relative overflow-hidden cursor-pointer"
@@ -270,14 +231,21 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ hideNavbar }) 
                     {/* Tech Stack Pills */}
                     <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-line">
                       {project.technologies.map(tech => (
-                        <span 
-                          key={tech} 
+                        <span
+                          key={tech}
                           className="px-2 py-0.5 bg-paper-2 border border-line text-ink-soft text-[9px] font-bold uppercase tracking-wider rounded-sm"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
+
+                    {/* Demo credentials note (AccessVault) */}
+                    {project.demoCredentials && (
+                      <p className="mt-3 text-[10px] sm:text-[11px] text-ink-soft/80 font-mono bg-paper-2 border border-line rounded-sm px-2.5 py-1.5">
+                        {project.demoCredentials}
+                      </p>
+                    )}
                   </div>
                 </motion.a>
               </div>

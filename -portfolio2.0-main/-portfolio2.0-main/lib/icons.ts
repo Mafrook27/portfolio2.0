@@ -20,6 +20,7 @@ import {
   Database,
   Globe,
   PenTool,
+  Workflow,
 } from 'lucide-react';
 import { FaJava, FaHtml5, FaCss3Alt, FaPython, FaReact, FaGitAlt, FaDocker, FaAws } from 'react-icons/fa';
 import {
@@ -34,6 +35,12 @@ import {
   SiRedis,
   SiVercel,
   SiFirebase,
+  SiNextdotjs,
+  SiFastapi,
+  SiGrafana,
+  SiPrometheus,
+  SiDigitalocean,
+  SiGithubactions,
 } from 'react-icons/si';
 
 export type IconComponent = ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
@@ -42,11 +49,12 @@ const registry: Record<string, IconComponent> = {
   // lucide
   Award, BookOpen, Code2, Cpu, FileText, Github, GraduationCap, Layout,
   Linkedin, Phone, ShieldCheck, Sparkles, Terminal, Wrench, Rocket,
-  Database, Globe, PenTool,
+  Database, Globe, PenTool, Workflow,
   // react-icons
   FaJava, FaHtml5, FaCss3Alt, FaPython, FaReact, FaGitAlt, FaDocker, FaAws,
   SiJavascript, SiMysql, SiExpress, SiMongodb, SiTailwindcss, SiPostman,
-  SiTypescript, SiReactquery, SiRedis, SiVercel, SiFirebase,
+  SiTypescript, SiReactquery, SiRedis, SiVercel, SiFirebase, SiNextdotjs,
+  SiFastapi, SiGrafana, SiPrometheus, SiDigitalocean, SiGithubactions,
 };
 
 export function getIcon(name?: string): IconComponent {
